@@ -53,8 +53,8 @@ body {
 }
 
 .header {
-  background-color: transparent;
   /* Make the header transparent */
+  background-color: transparent;
   color: #fff;
   display: flex;
   align-items: center;
@@ -81,7 +81,6 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   /*Addtext-shadowtransition*/
-  : ;
   transition: background-color .3s, text-shadow .3s;
   -webkit-transition: background-color .3s, text-shadow .3s;
   -moz-transition: background-color .3s, text-shadow .3s;
@@ -91,32 +90,32 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-  background-color: rgba(0, 123, 255, 0.8);
-  /* Blue color with opacity for hover and active states */
   color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* Blue color with opacity for hover and active states */
+  background-color: rgba(0, 123, 255, 0.8);
   /* Add a subtle text-shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Styles for small screens (mobile) */
 @media screen and (max-width: 767px) {
   .navbar {
-    display: none;
     /* Hide the navigation menu by default on small screens */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 80px;
     right: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
     /* Black background with opacity for the collapsed menu */
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 10px;
   }
 
   .navbar.active {
+    /* Show the navigation menu when the 'active' class is applied on small screens */
     display: flex;
     height: 100vh;
-    /* Show the navigation menu when the 'active' class is applied on small screens */
   }
 
   .navbar a {
@@ -178,14 +177,13 @@ section {
   font-size: 3rem;
   font-weight: 700;
   color: transparent;
+  width: fit-content;
   -webkit-text-stroke: 0.7px var(--main-color);
   background-image: linear-gradient(var(--main-color), var(--main-color));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
-  background-position: 6 0;
-  animation-delay: 2.3s;
-  animation: homeBgText 6s linear infinite;
-  -webkit-animation: homeBgText 6s linear infinite;
+  animation: homeBgText 6s 2.3s linear infinite;
+  -webkit-animation: homeBgText 6s 2.3s linear infinite;
 }
 
 .text-animate h2::before {
@@ -197,9 +195,8 @@ section {
   height: 100%;
   border-right: 2px solid var(--main-color);
   z-index: -1;
-  animation-delay: 2s;
-  animation: homeCursorText 6s linear infinite;
-  -webkit-animation: homeCursorText 6s linear infinite;
+  animation: homeCursorText 6s 2.3s linear infinite;
+  -webkit-animation: homeCursorText 6s 2.3s linear infinite;
 }
 
 .home-content p {
@@ -1100,12 +1097,13 @@ section:nth-child(odd) .animate-scroll,
 }
 
 /* KEYFRAMES animation */
+
 @keyframes homeBgText {
 
   0%,
   10%,
   100% {
-    background-position: -42rem 0;
+    background-position: -36rem 0;
   }
 
   65%,
@@ -1123,15 +1121,8 @@ section:nth-child(odd) .animate-scroll,
   }
 
   65%,
-  78%,
   85% {
-    width: 86%;
-    opacity: 1;
-  }
-
-  75%,
-  81% {
-    opacity: 0;
+    width: 36rem;
   }
 }
 
