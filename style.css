@@ -181,9 +181,10 @@ section {
   -webkit-text-stroke: 0.7px var(--main-color);
   background-image: linear-gradient(var(--main-color), var(--main-color));
   background-repeat: no-repeat;
+  background-position: -36rem 0;
   -webkit-background-clip: text;
-  animation: homeBgText 6s 2.3s linear infinite;
-  -webkit-animation: homeBgText 6s 2.3s linear infinite;
+  animation: homeBgText 6s 2s linear infinite;
+  -webkit-animation: homeBgText 6s 2s linear infinite;
 }
 
 .text-animate h2::before {
@@ -195,8 +196,8 @@ section {
   height: 100%;
   border-right: 2px solid var(--main-color);
   z-index: -1;
-  animation: homeCursorText 6s 2.3s linear infinite;
-  -webkit-animation: homeCursorText 6s 2.3s linear infinite;
+  animation: homeCursorText 6s 2s linear infinite;
+  -webkit-animation: homeCursorText 6s 2s linear infinite;
 }
 
 .home-content p {
