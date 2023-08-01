@@ -380,7 +380,7 @@ span {
   width: 90%;
   border-radius: 50%;
   border: .2rem solid var(--main-color);
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .about-img .circle-spin {
@@ -892,6 +892,7 @@ span {
 #menu {
   color: var(--text-color);
   cursor: pointer;
+  user-select: none;
   display: none;
   font-size: 3rem;
   position: relative;
