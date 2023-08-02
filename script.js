@@ -5,6 +5,7 @@ const navbar = document.querySelector(".navbar");
 const homeLink = document.querySelector('.navbar a[href="#home"]');
 const navLinks = document.querySelectorAll(".navbar a");
 const sections = document.querySelectorAll("body>section");
+const syncImgs = document.querySelectorAll('img:not([decoding="async"])');
 
 menuIcon.addEventListener("click", () => {
   navbar.classList.toggle("active");
@@ -57,3 +58,8 @@ window.onscroll = () => {
   menuIcon.classList.remove("fa-xmark");
   navbar.classList.remove("active");
 };
+
+// Set all images to async loading
+syncImgs.forEach((img) => {
+  img.setAttribute("decoding", "async");
+});
